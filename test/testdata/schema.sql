@@ -119,6 +119,8 @@ CREATE TABLE GeneratedColumns (
 
 CREATE TABLE AllowCommitTimestamp (
   ID INT64 NOT NULL,
+  EndsAt TIMESTAMP OPTIONS (allow_commit_timestamp=true),
+  CreatedAt TIMESTAMP NOT NULL OPTIONS (allow_commit_timestamp=true),
   UpdatedAt TIMESTAMP NOT NULL OPTIONS (allow_commit_timestamp=true)
 ) PRIMARY KEY(ID);
 
